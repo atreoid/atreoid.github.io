@@ -1,24 +1,81 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
   <head>
-    <title>atreoid - Homepage</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>atreoid</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style type="text/css">
+      html,
+      body {
+        height: 100%;
+        margin: 10;
+        padding: 10;
+      }
+
+      body {
+        cursor: url("cursors/real-hand.cur"), auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      img {
+        width: 30%;
+        height: auto;
+        margin: 20px 0;
+      }
+
+      iframe {
+        width: 50%;
+        height: 300px; /* Adjust as needed */
+        margin: 20px 0;
+      }
+    </style>
   </head>
-  
+
   <body>
-    <p>Hi, I'm 
-<a href="https://atreoid.github.io/pages/bio.html">atreoid</a>
-!</p>  
-   
-     <img src="/images/Carrion_crow_(Corvus_corone)_head.jpg" alt="crow" width="50%" height="50%">
-    
-    <p>Welcome to my website!</p> 
-    <iframe width="50%" height="50%" src="https://www.youtube.com/embed/BGPGknpq3e0?si=q9zOhHlOT4m6LYwO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
- <iframe
-      src="https://mynoise.net/NoiseMachines/dreamingNautilusGenerativeSoundscape.php"
+    <div id="gradient-background"></div>
+    <p>
+      Hi, I'm
+      <a href="https://atreoid.github.io/pages/bio.html">atreoid</a>
+      !
+    </p>
+
+    <img src="/images/Carrion_crow_(Corvus_corone)_head.jpg" alt="crow" />
+
+    <p>Welcome to my website!</p>
+    <iframe
+      src="https://www.youtube.com/embed/BGPGknpq3e0?si=q9zOhHlOT4m6LYwO"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <iframe
+      src="https://mynoise.net/NoiseMachines/dreamingNautilusGenerativeSoundscape.php?l=46636355644240342836&a=1&am=s&astart=1&title=Dreaming%20Nautilus"
       title="MyNoise Sound Generator"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+    <script>
+      // Add gradient follow effect
+      const gradient = document.getElementById("gradient-background");
+
+      document.addEventListener("mousemove", (event) => {
+        const x = event.clientX / window.innerWidth;
+        const y = event.clientY / window.innerHeight;
+        gradient.style.background = `
+          radial-gradient(
+            circle at ${x * 100}% ${y * 100}%, 
+            #FF69B4, 
+            #00FFFF
+          )
+        `;
+      });
+    </script>
   </body>
 </html>
