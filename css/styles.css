@@ -65,7 +65,7 @@ iframe {
   left: 0;
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  background-image: url('images/sprite-sheet.png');
+  background-image: url('../images/sprite-sheet.png');
   background-repeat: no-repeat;
   z-index: -1; /* Place behind content */
 
