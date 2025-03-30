@@ -58,3 +58,11 @@ iframe {
   z-index: -1; /* Place it behind all content */
   pointer-events: none; /* Allow clicks to pass through */
 }
+
+.sprite-icon {
+  background-image: url('images/sprite-sheet.png');
+  /* Set the size of the "frame" for each sprite */
+  width: 1280px;   /* Width of a single sprite */
+  height: 720px;  /* Height of a single sprite */
+  display: inline-block; /* For non-block elements */
+}<div class="sprite-icon" style="background-position: 0 0;"></div><div class="sprite-icon" style="background-position: -1280px 0;"></div>
