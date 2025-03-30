@@ -71,4 +71,5 @@ iframe {
 
   /* Total sprite sheet width = 6400px (5 frames × 1280px) */
   background-size: 6400px 720px; /* Match total sprite sheet dimensions */
+    border: 4px solid red; /* Debug line */
 }
