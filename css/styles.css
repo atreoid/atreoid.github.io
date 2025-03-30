@@ -59,10 +59,16 @@ iframe {
   pointer-events: none; /* Allow clicks to pass through */
 }
 
-.sprite-icon {
+.sprite-background {
+  position: fixed; /* Stays fixed while scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
   background-image: url('images/sprite-sheet.png');
-  /* Set the size of the "frame" for each sprite */
-  width: 1280px;   /* Width of a single sprite */
-  height: 720px;  /* Height of a single sprite */
-  display: inline-block; /* For non-block elements */
-}<div class="sprite-icon" style="background-position: 0 0;"></div><div class="sprite-icon" style="background-position: -1280px 0;"></div>
+  background-repeat: no-repeat;
+  z-index: -1; /* Place behind content */
+
+  /* Total sprite sheet width = 6400px (5 frames × 1280px) */
+  background-size: 6400px 720px; /* Match total sprite sheet dimensions */
+}
