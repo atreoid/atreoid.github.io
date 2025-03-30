@@ -1,1 +1,37 @@
-painter, skin picker, walker
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Your bio content -->
+  <div class="content">
+    <h1>My Bio</h1>
+    <p>Scroll down to animate the background...</p>
+    <!-- Add lots of content here to test scrolling -->
+    <div style="height: 2000px;"></div>
+  </div>
+
+  <!-- Full-screen background container -->
+  <div class="sprite-background"></div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const background = document.querySelector('.sprite-background');
+    const totalFrames = 5; // 6400px / 1280px = 5 frames
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+    window.addEventListener('scroll', function() {
+      // Calculate scroll progress (0 to 1)
+      const scrollPercent = window.scrollY / maxScroll;
+
+      // Calculate the frame position (0px to 5120px)
+      // 6400px (total) - 1280px (1 frame) = 5120px max position
+      const backgroundPosition = scrollPercent * (6400 - 1280);
+
+      // Update the background position
+      background.style.backgroundPosition = `-${backgroundPosition}px 0`;
+    });
+  });
+</script>
+</body>
+</html>
