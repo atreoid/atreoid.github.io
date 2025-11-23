@@ -2,7 +2,7 @@
 
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: none;
+    background-color: #8FD3B4;
     text-align: center;
     padding: 50px;
 }
@@ -28,11 +28,9 @@ a:visited {
   color: #a6c1a4;
 }
 
-<style>
-  body {background-color: #8FD3B4}
+
   .outlined-paragraph {
     outline-style: solid;
     outline-width: medium;
     outline-color: red;
   }
-</style>
