@@ -25,6 +25,16 @@ body.home {
   flex: 1;
   align-content: center;
 }
+.top-bar nav {
+  display: flex;
+  justify-content: flex-start;   /* Bio and Artist Statement start on the left */
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.push-right {
+  margin-left: auto;             /* pushes Contact all the way to the right */
+}
 h1 {
   color: #FB5B33;
 }
