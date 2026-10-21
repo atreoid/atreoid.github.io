@@ -77,7 +77,7 @@ nav a:focus {
 /* The sub-menu is a tiny invisible point at the CENTER of the Artwork button.
    Every sub-page link grows out from this point. */
 .submenu {
-  --radius: 1500px;       /* how far the links fly out. Bigger = wider fan */
+  --radius: 150px;       /* how far the links fly out. Bigger = wider fan */
   position: absolute;
   top: 50%;
   left: 50%;
