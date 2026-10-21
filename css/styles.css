@@ -87,11 +87,10 @@ body.home {
 
 .card {
   display: block;
-  transition: transform 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+
   text-decoration: none;   /* no underline on the whole card */
 }
 
