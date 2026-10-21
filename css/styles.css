@@ -15,8 +15,8 @@ body.home {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 45px;
   max-width: 1000px;
   width: 100%;
   box-sizing: border-box;
