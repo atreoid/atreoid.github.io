@@ -1,4 +1,6 @@
-
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
 body.landing {
   display: flex;
   justify-content: center;  /* centers sideways */
