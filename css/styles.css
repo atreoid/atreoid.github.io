@@ -1,35 +1,19 @@
+/* ---------- Page-wide basics ---------- */
 body {
   font-family: "Space Grotesk", sans-serif;
-}
-body.landing {
-  display: flex;
-  justify-content: center;  /* centers sideways */
-  align-items: center;      /* centers up and down */
-  min-height: 100vh;        /* makes the body as tall as the screen */
-  margin: 0;
-  box-sizing: border-box;   /* stops your 20px padding from causing a scrollbar */
-}
-
-body.landing img {
-  max-width: 100%;          /* stops big images overflowing on small screens */
-  max-height: 90vh;         /* keeps the whole image visible without scrolling */
-  height: auto;
-}
-  body {
-    
-    background-color: #8FD3B4;
-    text-align: center;
-    padding: 20px;
-   overflow: hidden;
+  background-color: #8FD3B4;
+  text-align: center;
+  padding: 20px;
 }
 
 h1 {
-    color: #FB5B33;
+  color: #FB5B33;
 }
 
 p {
-    color: #ffffff;
+  color: #ffffff;
 }
+
 a {
   color: #ff5733;
   text-decoration: none;
@@ -40,14 +24,88 @@ a:hover {
   text-decoration: underline;
 }
 
-
+.outlined-paragraph {
+  outline-style: solid;
+  outline-width: medium;
+  outline-color: #F59D3D;
 }
 
+/* ---------- Landing page (index.html) ---------- */
+body.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  .outlined-paragraph {
-    outline-style: solid;
-    outline-width: medium;
-    outline-color: #F59D3D;
-  }
+body.landing img {
+  max-width: 100%;
+  max-height: 90vh;
+  height: auto;
+}
 
+/* ---------- Home page (home.html) ---------- */
+body.home {
+  padding: 0;              /* lets the top bar reach the screen edges */
+  margin: 0;
+}
 
+/* Horizontal bar at the top. To put it at the bottom instead, see notes. */
+.top-bar {
+  position: sticky;        /* stays visible while scrolling */
+  top: 0;
+  background: #222;
+  padding: 14px 20px;
+}
+
+.top-bar nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;         /* links wrap onto a second line on small phones */
+}
+
+.top-bar a {
+  color: #f2efe9;
+}
+
+.top-bar a:hover {
+  color: #5ce561;
+}
+
+/* Grid of three cards. Wraps to fewer columns on narrow screens. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.card {
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  text-decoration: none;   /* no underline on the whole card */
+}
+
+/* Crops every image to the same shape so the row lines up */
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 12px 0 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+}
