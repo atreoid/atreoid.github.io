@@ -1,25 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body>
- 
- <nav>
-    <ul>
-<li><a href="painting.html">Painting</a></li>
-<li><a href="photography.html">Photography</a></li>
-<li><a href="drawing.html">Drawing</a></li>
-        </ul>
-   
- <ul>
-      <li><a href="statement.html">Artist Statement</a></li>
-      <li><a href="contact.html">Contact</a></li>
-   <li><a href="bio.html">Bio</a></li>
-    </ul>
-  </nav>
+<body class="home">
+
+  <!-- Horizontal bar at the top with the three info pages -->
+  <header class="top-bar">
+    <nav>
+      <a href="bio.html">Bio</a>
+      <a href="statement.html">Artist Statement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Three image links, each with a small heading underneath -->
+  <main class="gallery">
+
+    <a class="card" href="painting.html">
+      <img src="../images/Verwesung.jpg" alt="painting">
+      <h2>Painting</h2>
+    </a>
+
+    <a class="card" href="drawing.html">
+      <img src="../images/phone_murder.jpg" alt="Drawing">
+      <h2>Drawing</h2>
+    </a>
+
+    <a class="card" href="photography.html">
+      <img src="../images/Landwehrkanal.jpg" alt="Photography">
+      <h2>Photography</h2>
+    </a>
+
+  </main>
 
 </body>
-
+</html>
