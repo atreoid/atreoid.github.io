@@ -1,5 +1,18 @@
 
+body.landing {
+  display: flex;
+  justify-content: center;  /* centers sideways */
+  align-items: center;      /* centers up and down */
+  min-height: 100vh;        /* makes the body as tall as the screen */
+  margin: 0;
+  box-sizing: border-box;   /* stops your 20px padding from causing a scrollbar */
+}
 
+body.landing img {
+  max-width: 100%;          /* stops big images overflowing on small screens */
+  max-height: 90vh;         /* keeps the whole image visible without scrolling */
+  height: auto;
+}
   body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #8FD3B4;
