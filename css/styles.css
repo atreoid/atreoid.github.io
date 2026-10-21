@@ -98,7 +98,7 @@ body.home {
 .card img {
   display: block;
   width: 100%;
-  aspect-ratio: 9 / 10;
+  aspect-ratio: 5 / 4;
   object-fit: cover;
 }
 
